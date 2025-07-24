@@ -138,6 +138,9 @@ def delete_note(note_id):
     except Exception as e:
         return jsonify({"error": f"Server error: {str(e)}"}), 500
 
+import os
+
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=3000, debug=True)
+    port = int(os.environ.get("PORT", 3000))  # لو Railway حدد بورت، هنستخدمه
+    app.run(host="0.0.0.0", port=port, debug=True)
 
