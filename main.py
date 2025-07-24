@@ -140,7 +140,6 @@ def delete_note(note_id):
 
 import os
 
-if __name__ == "__main__":
-    port = int(os.environ.get("PORT", 3000))  # لو Railway حدد بورت، هنستخدمه
-    app.run(host="0.0.0.0", port=port, debug=True)
+port = int(os.environ.get("PORT", 3000))
+app.run(host="0.0.0.0", port=port, debug=True)
 
