@@ -137,9 +137,6 @@ def delete_note(note_id):
         return jsonify({"error": f"Database error: {err}"}), 500
     except Exception as e:
         return jsonify({"error": f"Server error: {str(e)}"}), 500
-import os
 
 if __name__ == "__main__":
-    port = int(os.environ.get("PORT", 3000))  # متغير البيئة PORT
-    app.run(host="0.0.0.0", port=port, debug=True)
-
+    app.run(host="0.0.0.0", port=3000, debug=True)
